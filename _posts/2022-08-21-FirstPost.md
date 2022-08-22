@@ -1,9 +1,9 @@
 ---
-toc: true
+toc: false
 layout: post
-description: first post
+description: Hacks
 categories: [markdown]
-title: Iris's First Post
+title: TT 1.0 Tools and Equipment
 ---
 
 ## Part 1 Fastpages
