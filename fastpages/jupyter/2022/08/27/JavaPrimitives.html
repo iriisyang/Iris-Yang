@@ -151,6 +151,7 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">String</span> <span class="n">userInputStr</span><span class="p">;</span>
         <span class="kt">double</span> <span class="n">celsiusdouble</span><span class="p">,</span> <span class="n">fahrenheitdouble</span><span class="p">;</span>
+        <span class="kt">boolean</span> <span class="n">recommendationboolean</span><span class="p">;</span>
         <span class="n">Scanner</span> <span class="n">inputStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span> <span class="c1">//creates area for input</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;What is your Celsius degrees? &quot;</span><span class="p">);</span>
@@ -163,6 +164,19 @@ window.onload = wrap_img;
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\nFahrenheit conversion: &quot;</span> <span class="p">);</span> <span class="c1">//enter line and print fahrenheit</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">fahrenheitdouble</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span> <span class="p">(</span><span class="s">&quot;\nYou would like an activity recommendation for that temperature? (answer true or false)&quot;</span><span class="p">);</span>
+        <span class="n">userInputStr</span> <span class="o">=</span> <span class="n">inputStream</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+        <span class="n">recommendationboolean</span> <span class="o">=</span> <span class="n">Boolean</span><span class="p">.</span><span class="na">parseBoolean</span><span class="p">(</span><span class="n">userInputStr</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">recommendationboolean</span><span class="o">=</span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="n">celsiusdouble</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//creates recommendation if wanted and for specific temperature range</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\nStay inside and read a book with hot chocolate&quot;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">recommendationboolean</span><span class="o">=</span><span class="kc">true</span> <span class="o">&amp;&amp;</span> <span class="n">celsiusdouble</span><span class="o">&gt;</span><span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;\nGo on a hike outside with friends&quot;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        
     <span class="p">}</span>   
 <span class="p">}</span>
 
@@ -179,8 +193,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>What is your Celsius degrees? 30.1
-Fahrenheit conversion: 86.18</pre>
+<pre>What is your Celsius degrees? 10.0
+Fahrenheit conversion: 50.0
+You would like an activity recommendation for that temperature? (answer true or false)
+Stay inside and read a book with hot chocolate</pre>
 </div>
 </div>
 
