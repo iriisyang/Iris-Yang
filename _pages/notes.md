@@ -18,9 +18,11 @@ permalink: /notes/
 _notebooks:
 - mostly jupyter files
 - building block of markdown, python, java, javascript into a jupyter notebook. 
+
 _posts: 
 - markdown .md files
 - frontend web design with markdown, html, and javascript
+
 _word
 - word .docx files
 - save Microsoft or Google documents into a docx format
@@ -32,6 +34,7 @@ Homepage
 
 ## Weekly Assignments
 [TT 1.0 Tools and Equipment](https://iriisyang.github.io/Iris-Yang/markdown/2022/08/21/FirstPost.html)
+[TT 1.1 Innovations Week 1](https://iriisyang.github.io/Iris-Yang/techtalks/2022/08/29/TT2.html)
 
 # Unit 2: Using Objects
 # Unit 3: Boolean Expressions and if Statements
