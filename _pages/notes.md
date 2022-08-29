@@ -31,7 +31,7 @@ Homepage
 - standard name for your web sites landing page.
 
 ## Weekly Assignments
-[TT 1.0 Tools and Equipment] (https://iriisyang.github.io/Iris-Yang/markdown/2022/08/21/FirstPost.html)
+[TT 1.0 Tools and Equipment](https://iriisyang.github.io/Iris-Yang/markdown/2022/08/21/FirstPost.html)
 
 # Unit 2: Using Objects
 # Unit 3: Boolean Expressions and if Statements
