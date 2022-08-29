@@ -2,7 +2,7 @@
 toc: false
 layout: post
 description: Hacks
-categories: [markdown]
+categories: [techtalks]
 title: TT 1.0 Tools and Equipment
 ---
 
