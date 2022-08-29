@@ -1,7 +1,7 @@
 ---
 toc: false
 layout: post
-description: Hacks
+description: week 1
 categories: [markdown]
 title: TT 1.1 Innovation Week One
 ---
