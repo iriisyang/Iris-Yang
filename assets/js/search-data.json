@@ -96,8 +96,8 @@
 
   
       ,"page3": {
-          "title": "Notes",
-          "content": "",
+          "title": "CSA Notes",
+          "content": "Unit 1: Primitives . Vocab . markdown: text to HTML conversion | int: integer, any whole number | double: tens place in decimal | string: words | boolean: true/false | primitive: data types already defined in Java | .",
           "url": "https://iriisyang.github.io/Iris-Yang/notes/",
           "relUrl": "/notes/",
           "date": ""
