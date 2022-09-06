@@ -15,8 +15,8 @@
         ,"post1": {
             "title": "Standard Deviation Calculator",
             "content": "import java.util.Scanner; public class SDCalculator { public static void main(String[] args) { String userInputStr; double sdNumber; int numofNum; Scanner inputStream = new Scanner(System.in); System.out.print(&quot;how many values would you like to find the standard deviation of?&quot;); userInputStr = inputStream.nextLine(); numofNum = Integer.parseInt(userInputStr); double[] nums = new double [numofNum]; //creates array with doubles, nomofNum number of values in the array for (int i=0; i&lt;numofNum; i++) { System.out.print(&quot; nenter value: &quot;); userInputStr = inputStream.nextLine(); nums[i] = Double.parseDouble(userInputStr); System.out.print(nums[i]); } sdNumber = sdcalc(nums); System.out.print(&quot; nthe standard deviation is &quot; +sdNumber); } static double sdcalc (double[] nums) { double sum = 0.0; for (int i=0; i&lt;nums.length; i++) { sum += nums[i]; } double average = sum/nums.length; double sdsum = 0.0; double standev = 0.0; for (int j=0; j&lt;nums.length; j++) { sdsum += Math.pow(nums[j]-average, 2); standev = Math.sqrt(sdsum/nums.length); } return standev; } } SDCalculator.main(null); . how many values would you like to find the standard deviation of? enter value: 24.0 enter value: 26.0 enter value: 28.0 the standard deviation is 1.632993161855452 .",
-            "url": "https://iriisyang.github.io/Iris-Yang/java%20code/2022/09/05/StandardDeviation.html",
-            "relUrl": "/java%20code/2022/09/05/StandardDeviation.html",
+            "url": "https://iriisyang.github.io/Iris-Yang/java/2022/09/05/StandardDeviation.html",
+            "relUrl": "/java/2022/09/05/StandardDeviation.html",
             "date": " • Sep 5, 2022"
         }
         
@@ -26,8 +26,8 @@
         ,"post2": {
             "title": "Mode Calculator",
             "content": "import java.util.Scanner; public class ModeCalculator { public static void main(String[] args) { String userInputStr; double mode, maxValue; int numofNum; Scanner inputStream = new Scanner(System.in); System.out.print(&quot;how many values would you like to find the mode of?&quot;); userInputStr = inputStream.nextLine(); numofNum = Integer.parseInt(userInputStr); double[] nums = new double [numofNum]; //creates array with doubles, numofNum number of values in the array for (int i=0; i &lt; numofNum; i++) { System.out.print(&quot; nenter value: &quot;); userInputStr = inputStream.nextLine(); nums[i] = Double.parseDouble(userInputStr); System.out.print(nums[i]); } mode = modecalc(nums); System.out.print(&quot; nthe mode is &quot; +mode); } static double modecalc(double[] nums) { double maxValue = 0.0; int maxCount = 0, i, j; for (i=0; i &lt; nums.length; i++) { int count = 0; for (j=0; j &lt; nums.length; j++) { for (j = 0; j &lt; nums.length; ++j) { if (nums[j] == nums[i]) ++count; } } if (count &gt; maxCount) { maxCount = count; maxValue = nums[i]; } } return maxValue; } } ModeCalculator.main(null); . how many values would you like to find the mode of? enter value: 1.0 enter value: 2.0 enter value: 1.0 enter value: 1.0 enter value: 1.0 the mode is 1.0 .",
-            "url": "https://iriisyang.github.io/Iris-Yang/java%20code/2022/09/05/Mode.html",
-            "relUrl": "/java%20code/2022/09/05/Mode.html",
+            "url": "https://iriisyang.github.io/Iris-Yang/java/2022/09/05/Mode.html",
+            "relUrl": "/java/2022/09/05/Mode.html",
             "date": " • Sep 5, 2022"
         }
         
@@ -37,8 +37,8 @@
         ,"post3": {
             "title": "Mean Calculator",
             "content": "import java.util.Scanner; public class MeanCalculator { public static void main(String[] args) { String userInputStr; double meanNumber; int numofNum; Scanner inputStream = new Scanner(System.in); System.out.print(&quot;how many values would you like to average?&quot;); userInputStr = inputStream.nextLine(); numofNum = Integer.parseInt(userInputStr); double[] nums = new double [numofNum]; //creates array with doubles, nomofNum number of values in the array for (int i=0; i&lt;numofNum; i++) { System.out.print(&quot; nenter value: &quot;); userInputStr = inputStream.nextLine(); nums[i] = Double.parseDouble(userInputStr); System.out.print(nums[i]); } meanNumber = meancalc(nums); System.out.print(&quot; nthe mean is &quot; +meanNumber); } static double meancalc (double[] nums) { double sum= 0.0; for (int i=0; i&lt;nums.length; i++) { sum +=nums[i]; } double average = sum/nums.length; return average; } } MeanCalculator.main(null); . how many values would you like to average? . java.lang.NumberFormatException: For input string: &#34;&#34; at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67) at java.base/java.lang.Integer.parseInt(Integer.java:678) at java.base/java.lang.Integer.parseInt(Integer.java:786) at MeanCalculator.main(#15:1) at .(#23:1) .",
-            "url": "https://iriisyang.github.io/Iris-Yang/java%20code/2022/09/05/Mean.html",
-            "relUrl": "/java%20code/2022/09/05/Mean.html",
+            "url": "https://iriisyang.github.io/Iris-Yang/java/2022/09/05/Mean.html",
+            "relUrl": "/java/2022/09/05/Mean.html",
             "date": " • Sep 5, 2022"
         }
         
@@ -48,8 +48,8 @@
         ,"post4": {
             "title": "Temperature Converter",
             "content": "Integer . int a = 6; float b = 4; float sub= (a - b); System.out.println(sub); . Celsius to Fahrenheit Converter . import java.util.Scanner; //allows for user input public class CelsiusFahrenheit { public static void main(String[] args) { String userInputStr; double celsiusdouble, fahrenheitdouble; boolean recommendationboolean; Scanner inputStream = new Scanner(System.in); //creates area for input System.out.print(&quot;What is your Celsius degrees? &quot;); userInputStr = inputStream.nextLine(); //assigns userinputstr as input celsiusdouble = Double.parseDouble(userInputStr); //changes to stored variable celsiusdouble System.out.print(celsiusdouble); fahrenheitdouble = (celsiusdouble*1.8)+32; //set fahrenheit variable to conversion System.out.print(&quot; nFahrenheit conversion: &quot; ); //enter line and print fahrenheit System.out.print(fahrenheitdouble); System.out.print (&quot; nYou would like an activity recommendation for that temperature? (answer true or false)&quot;); userInputStr = inputStream.nextLine(); recommendationboolean = Boolean.parseBoolean(userInputStr); if (recommendationboolean=true &amp;&amp; celsiusdouble&lt;=10) { //creates recommendation if wanted for specific temperature range System.out.print(&quot; nStay inside and read a book with hot chocolate&quot;); } else if (recommendationboolean=true &amp;&amp; celsiusdouble&lt;=30 &amp;&amp; celsiusdouble&gt;10) { System.out.print(&quot; nGo on a hike outside with friends&quot;); } else if (recommendationboolean=true &amp;&amp; celsiusdouble&gt;30) { System.out.print(&quot; nEat ice cream on the beach&quot;); } else if (recommendationboolean=false) { System.out.print(&quot;Have a nice day!&quot;); } } } CelsiusFahrenheit.main(null); . What is your Celsius degrees? 15.0 Fahrenheit conversion: 59.0 You would like an activity recommendation for that temperature? (answer true or false) Go on a hike outside with friends .",
-            "url": "https://iriisyang.github.io/Iris-Yang/java%20code/2022/09/05/JavaPrimitives.html",
-            "relUrl": "/java%20code/2022/09/05/JavaPrimitives.html",
+            "url": "https://iriisyang.github.io/Iris-Yang/java/2022/09/05/JavaPrimitives.html",
+            "relUrl": "/java/2022/09/05/JavaPrimitives.html",
             "date": " • Sep 5, 2022"
         }
         
@@ -59,8 +59,8 @@
         ,"post5": {
             "title": "Java Jupyter Notebook",
             "content": "System.out.println(&quot;Hello&quot;); . Hello .",
-            "url": "https://iriisyang.github.io/Iris-Yang/java%20code/2022/09/05/JavaJupyterNotebook.html",
-            "relUrl": "/java%20code/2022/09/05/JavaJupyterNotebook.html",
+            "url": "https://iriisyang.github.io/Iris-Yang/java/2022/09/05/JavaJupyterNotebook.html",
+            "relUrl": "/java/2022/09/05/JavaJupyterNotebook.html",
             "date": " • Sep 5, 2022"
         }
         
