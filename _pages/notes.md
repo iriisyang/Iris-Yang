@@ -50,6 +50,21 @@ Console Based Menu
 - import java.lang.Math; //library for random numbers
 - public final String[][] COLORS = { // 2D Array of ANSI Terminal Colors
     - columns and rows [][]
+- within terminal
+- looks like list with different options and uses user input
+
+GUI Menu
+- separate program that opens up menu
+- more user friendly
+- very visual display
+
+Code.org
+- method format "variableName.methodName();"
+- uses painter as a visual object
+
+## Weekly Assignments
+
+[TT 1.2 Innovations Week 1](https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/05/TT3.html)
 
 # Unit 3: Boolean Expressions and if Statements
 # Unit 4: Iteration
