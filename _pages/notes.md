@@ -50,6 +50,7 @@ Console Based Menu
 - import java.lang.Math; //library for random numbers
 - public final String[][] COLORS = { // 2D Array of ANSI Terminal Colors
     - columns and rows [][]
+
 # Unit 3: Boolean Expressions and if Statements
 # Unit 4: Iteration
 # Unit 5: Writing Clauses
