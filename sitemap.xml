@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://iriisyang.github.io/Iris-Yang/markdown/2020/01/14/test-markdown-post.html</loc>
-<lastmod>2020-01-14T00:00:00-06:00</lastmod>
-</url>
-<url>
-<loc>https://iriisyang.github.io/Iris-Yang/jupyter/2020/02/20/test.html</loc>
-<lastmod>2020-02-20T00:00:00-06:00</lastmod>
-</url>
-<url>
 <loc>https://iriisyang.github.io/Iris-Yang/techtalks/2022/08/21/TT1.html</loc>
 <lastmod>2022-08-21T00:00:00-05:00</lastmod>
 </url>
@@ -21,15 +13,15 @@
 <lastmod>2022-08-29T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://iriisyang.github.io/Iris-Yang/fastpages/jupyter/2022/09/05/Bash.html</loc>
+<loc>https://iriisyang.github.io/Iris-Yang/bash/2022/09/05/Bash.html</loc>
 <lastmod>2022-09-05T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://iriisyang.github.io/Iris-Yang/fastpages/jupyter/2022/09/05/JavaJupyterNotebook.html</loc>
+<loc>https://iriisyang.github.io/Iris-Yang/java%20code/2022/09/05/JavaJupyterNotebook.html</loc>
 <lastmod>2022-09-05T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>https://iriisyang.github.io/Iris-Yang/fastpages/jupyter/2022/09/05/JavaPrimitives.html</loc>
+<loc>https://iriisyang.github.io/Iris-Yang/java%20code/2022/09/05/JavaPrimitives.html</loc>
 <lastmod>2022-09-05T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -42,6 +34,10 @@
 </url>
 <url>
 <loc>https://iriisyang.github.io/Iris-Yang/java%20code/2022/09/05/StandardDeviation.html</loc>
+<lastmod>2022-09-05T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/05/TT3.html</loc>
 <lastmod>2022-09-05T00:00:00-05:00</lastmod>
 </url>
 <url>
