@@ -38,6 +38,18 @@ Homepage
 [TT 1.1 Innovations Week 1](https://iriisyang.github.io/Iris-Yang/techtalks/2022/08/29/TT2.html)
 
 # Unit 2: Using Objects
+
+## Vocab
+- object: member of a java class
+    - has identity, state, behavior
+    - declaration, instantiation, initialization
+
+## Notes
+Console Based Menu
+- import java.util.Scanner; //library for user input
+- import java.lang.Math; //library for random numbers
+- public final String[][] COLORS = { // 2D Array of ANSI Terminal Colors
+    - columns and rows [][]
 # Unit 3: Boolean Expressions and if Statements
 # Unit 4: Iteration
 # Unit 5: Writing Clauses
