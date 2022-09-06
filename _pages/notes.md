@@ -62,6 +62,23 @@ Code.org
 - method format "variableName.methodName();"
 - uses painter as a visual object
 
+Class Defined
+- public class classname
+- class to add variables, objects, etc
+
+New Instance of Class
+- new Menu();
+- create an object of class
+
+Calling a Method
+- action needs to be performed
+
+Object Mutating Data
+- change in original state of input
+-  for (int i=0; i<nums.length; i++) {
+            sum +=nums[i];
+        }
+
 ## Weekly Assignments
 
 [TT 1.2 Innovations Week 1](https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/05/TT3.html)
