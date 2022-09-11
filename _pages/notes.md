@@ -92,3 +92,7 @@ Object Mutating Data
 # Unit 9: Inheritance
 # Unit 10: Recurision
 
+# PBL Notes
+
+AWS Deployment (linux)
+- "ps" linux command gives info related to process of system
