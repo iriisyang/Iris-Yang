@@ -12,3 +12,12 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+_posts/2022-09-05-Bash.md
+_posts/2022-09-05-JavaJupyterNotebook.md
+_posts/2022-09-05-JavaPrimitives.md
+.gitignore
+.gitignore
+_posts/2022-09-05-StandardDeviation.md
+_posts/2022-09-05-Mode.md
+.gitignore
+_posts/2022-09-05-Mean.md
