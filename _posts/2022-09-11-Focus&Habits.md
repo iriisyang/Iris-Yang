@@ -15,6 +15,14 @@ title: Focus and Habits
 - treating yourself is ok
 - teamwork and being able to take knowledge from others around you
 
+## Gratitude Letter to Mom
+Hi mom,
+I am so thankful for all that you so for me. You always keep me company when I stay up late doing homework even when I know you have work the next day. Never do you get annoyed when I complain about having nothing to eat or being too bust or too tired. I love you <3
+
+## Gratitude Letter to Mr. Swanson
+Hey Mr. Swanson,
+Thank you for making APUSH such a fun class last year. I never thought I could actually enjoy history. You made class so entertaining and something I actually wanted to learn instead of just memorizing things. Thank you!
+
 ## Gratitude List
 - family and friends
 - education
