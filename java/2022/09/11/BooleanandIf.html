@@ -161,12 +161,26 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">alcaraz</span><span class="o">=</span><span class="n">win</span><span class="p">){</span> <span class="c1">//if Alcaraz wins the US Open mens final</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">alcaraz</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">alcaraz</span><span class="o">=</span><span class="kc">true</span><span class="p">){</span> <span class="c1">//if Alcaraz wins the US Open mens final</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"woohoo! youngest champion since 1990!"</span><span class="p">);</span> <span class="c1">//Alcaraz will become the US open champion since </span>
 <span class="p">}</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>woohoo! youngest champion since 1990!</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -191,7 +205,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">alcaraz</span><span class="o">=</span><span class="n">win</span><span class="p">){</span> <span class="c1">//if Alcaraz wins the US Open mens final</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">boolean</span> <span class="n">alcaraz</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">alcaraz</span><span class="o">=</span><span class="kc">true</span><span class="p">){</span> <span class="c1">//if Alcaraz wins the US Open mens final</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"woohoo! alcaraz is youngest champion since 1990!"</span><span class="p">);</span> <span class="c1">//Alcaraz will become the youngest US open champion since Sampras</span>
 <span class="p">}</span>
 <span class="k">else</span> <span class="p">{</span> <span class="c1">//otherwise (if Alcaraz loses)</span>
@@ -200,6 +215,19 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>woohoo! alcaraz is youngest champion since 1990!</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -224,18 +252,32 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">temp</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//if the temperature is less than or equal to 10 degrees following will output</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">temp</span><span class="o">=</span><span class="mi">15</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">temp</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//if the temperature is less than or equal to 10 degrees following will output</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"snuggle up with hot tea and watch the Sound of Music"</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">temp</span><span class="o">&gt;</span><span class="mi">10</span> <span class="o">&amp;&amp;</span> <span class="n">temp</span><span class="o">&lt;=</span><span class="mi">25</span><span class="p">)</span> <span class="p">{</span><span class="c1">//if the temperature if greater than 10 degreed but less than or equal to 25 degrees following will output</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"a hike in the wild wild wilderness"</span><span class="p">)</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"a hike in the wild wild wilderness"</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">else</span> <span class="p">{</span> <span class="c1">//any other temperature (greater than 25 degrees) will output</span>
-    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"beach day!"</span><span class="p">)</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"beach day!"</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>a hike in the wild wild wilderness</pre>
+</div>
+</div>
+
 </div>
 </div>
 
