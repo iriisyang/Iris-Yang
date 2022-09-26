@@ -4,23 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Page 2 of 2 for Iris Yang | An easy to use blogging platform with support for Jupyter Notebooks.</title>
+<title>TT 1.5 Design Starters | Iris Yang</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Iris Yang" />
+<meta property="og:title" content="TT 1.5 Design Starters" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://iriisyang.github.io/Iris-Yang/page2/" />
-<meta property="og:url" content="https://iriisyang.github.io/Iris-Yang/page2/" />
+<meta name="description" content="Week 5" />
+<meta property="og:description" content="Week 5" />
+<link rel="canonical" href="https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/25/TT6.mg" />
+<meta property="og:url" content="https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/25/TT6.mg" />
 <meta property="og:site_name" content="Iris Yang" />
-<meta property="og:image" content="https://iriisyang.github.io/Iris-Yang/images/logo.png" />
-<meta property="og:type" content="website" />
-<link rel="prev" href="https://iriisyang.github.io/Iris-Yang/" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://iriisyang.github.io/Iris-Yang/images/logo.png" />
-<meta property="twitter:title" content="Iris Yang" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-09-25T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="TT 1.5 Design Starters" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Iris Yang","image":"https://iriisyang.github.io/Iris-Yang/images/logo.png","url":"https://iriisyang.github.io/Iris-Yang/page2/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-09-25T00:00:00-05:00","datePublished":"2022-09-25T00:00:00-05:00","description":"Week 5","headline":"TT 1.5 Design Starters","mainEntityOfPage":{"@type":"WebPage","@id":"https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/25/TT6.mg"},"url":"https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/25/TT6.mg"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Iris-Yang/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://iriisyang.github.io/Iris-Yang/feed.xml" title="Iris Yang" /><link rel="shortcut icon" type="image/x-icon" href="/Iris-Yang/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,75 +70,42 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p>Welcome to Iris’s Fastpages</p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<p><img src="/Iris-Yang/images/banner.jpg" alt="" /></p>
-
-<h1 id="posts">Posts</h1>
-
-
-
-  
-
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
-
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
-
- 
-  
-
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/Iris-Yang/techtalks/2022/09/11/TT4.html">
-    TT 1.3 Backend Development
-    </a>
-</h3><p class="post-meta-description">Week 3</p><p class="post-meta">Sep 11, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Iris-Yang/human/2022/09/11/Focus&Habits.html">
-    Focus and Habits
-    </a>
-</h3><p class="post-meta-description">Week 2</p><p class="post-meta">Sep 11, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Iris-Yang/techtalks/2022/09/05/TT3.html">
-    TT 1.2 Innovation Week 2
-    </a>
-</h3><p class="post-meta-description">Week 2</p><p class="post-meta">Sep 5, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Iris-Yang/other/2022/09/05/codeorg.html">
-    Code.org Learning
-    </a>
-</h3><p class="post-meta-description">code.org learning</p><p class="post-meta">Sep 5, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Iris-Yang/gov%20notes/2022/08/29/apgov.html">
-    AP Gov Notes
-    </a>
-</h3><p class="post-meta-description">notes for ap gov</p><p class="post-meta">Aug 29, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Iris-Yang/techtalks/2022/08/29/TT2.html">
-    TT 1.1 Innovation Week 1
-    </a>
-</h3><p class="post-meta-description">Week 1</p><p class="post-meta">Aug 29, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/Iris-Yang/techtalks/2022/08/21/TT1.html">
-    TT 1.0 Tools and Equipment
-    </a>
-</h3><p class="post-meta-description">week 0</p><p class="post-meta">Aug 21, 2022</p>
-</li></ul>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">TT 1.5 Design Starters</h1><p class="page-description">Week 5</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-25T00:00:00-05:00" itemprop="datePublished">
+        Sep 25, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
     
-      <div class="pager">
-        <ul class="pagination">
-          <li><a href="/Iris-Yang/" class="previous-page">1</a></li>
-          <li><div class="current-page">2</div></li>
-          <li><div class="pager-edge">•</div></li>
-        </ul>
-      </div></div>
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Iris-Yang/categories/#techtalks">techtalks</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    ## Fibonacci Classes
+- [fibonacci](https://iriisyang.github.io/Iris-Yang/java/2022/09/25/fibonacci.html)
+
+## JavaScript
+- [JavaScript]()
+
+## Team PBL
+- [PBL plan](https://sarayu-pr11.github.io/teamGrapeSnails/markdown/2022/09/23/pbl-plan.html)
+  </div><a class="u-url" href="/Iris-Yang/techtalks/2022/09/25/TT6.mg" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/Iris-Yang/"></data>
