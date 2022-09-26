@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -143,207 +143,34 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello, World!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">var</span> <span class="nx">msg</span> <span class="o">=</span> <span class="s2">"Hello, World!"</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello, World!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">logIt</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">output</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nx">logIt</span><span class="p">(</span><span class="nx">msg</span><span class="p">);</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello, World!
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Reuse of logIT"</span><span class="p">)</span>
-<span class="nx">logIt</span><span class="p">(</span><span class="s2">"Hello, Students!"</span><span class="p">);</span>
-<span class="nx">logIt</span><span class="p">(</span><span class="mf">2022</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Reuse of logIT
-Hello, Students!
-2022
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kd">function</span> <span class="nx">logItType</span><span class="p">(</span><span class="nx">output</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">output</span><span class="p">,</span> <span class="s2">";"</span><span class="p">,</span> <span class="nx">output</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Looking at dynamic nature of types in JavaScript"</span><span class="p">)</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">);</span> <span class="c1">// String</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="mf">2020</span><span class="p">);</span>    <span class="c1">// Number</span>
-<span class="nx">logItType</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">]);</span>  <span class="c1">// Object is generic for this Array, which similar to Python List</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Looking at dynamic nature of types in JavaScript
-string ; hello
-number ; 2020
-object ; [ 1, 2, 3 ]
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a function to hold data for a Person</span>
-<span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span> <span class="o">=</span> <span class="nx">ghID</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span> <span class="o">=</span> <span class="nx">classOf</span><span class="p">;</span>
+<span class="kd">function</span> <span class="nx">Analysis</span><span class="p">(</span><span class="nx">numbers</span><span class="p">,</span> <span class="nx">mean</span><span class="p">,</span> <span class="nx">mode</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">numbers</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">mean</span> <span class="o">=</span> <span class="nx">mean</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">mode</span> <span class="o">=</span> <span class="nx">mode</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// define a setter for role in Person data</span>
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setRole</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">role</span><span class="p">)</span> <span class="p">{</span>
+<span class="nx">Analysis</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">setRole</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">role</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="nx">role</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="c1">// define a JSON conversion "method" associated with Person</span>
-<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toJSON</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">ghID</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">ghID</span><span class="p">,</span> <span class="nx">classOf</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">classOf</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
+<span class="nx">Analysis</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toJSON</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">numbers</span><span class="p">,</span> <span class="nx">mean</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">mean</span><span class="p">,</span> <span class="nx">mode</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">mode</span><span class="p">,</span> <span class="nx">role</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">role</span><span class="p">};</span>
     <span class="kr">const</span> <span class="nx">json</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">);</span>  <span class="c1">// json/string is useful when passing data on internet</span>
     <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="c1">// make a new Person and assign to variable teacher</span>
-<span class="kd">var</span> <span class="nx">student</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Iris Yang"</span><span class="p">,</span> <span class="s2">"iriisyang"</span><span class="p">,</span> <span class="mf">2005</span><span class="p">);</span>  <span class="c1">// object type is easy to work with in JavaScript</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">student</span><span class="p">);</span>  <span class="c1">// before role</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>  <span class="c1">// ok to do this even though role is not yet defined</span>
+<span class="kd">var</span> <span class="nx">mainset</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"1,2,3,1"</span><span class="p">,</span> <span class="s2">"7/4"</span><span class="p">,</span> <span class="s2">"1"</span><span class="p">);</span>  <span class="c1">// object type is easy to work with in JavaScript</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">mainset</span><span class="p">);</span>  <span class="c1">// before role</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">mainset</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>  <span class="c1">// ok to do this even though role is not yet defined</span>
 
 <span class="c1">// output of Object and JSON/string associated with Teacher</span>
-<span class="nx">student</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Student"</span><span class="p">);</span>   <span class="c1">// set the role</span>
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">student</span><span class="p">);</span> 
-<span class="nx">logItType</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>
+<span class="nx">mainset</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Main Set"</span><span class="p">);</span>   <span class="c1">// set the role</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">mainset</span><span class="p">);</span> 
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">mainset</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>
 </pre></div>
 
     </div>
@@ -356,14 +183,77 @@ object ; [ 1, 2, 3 ]
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>object ; Person { name: 'Iris Yang', ghID: 'iriisyang', classOf: 2005, role: '' }
-string ; {"name":"Iris Yang","ghID":"iriisyang","classOf":2005,"role":""}
-object ; Person {
-  name: 'Iris Yang',
-  ghID: 'iriisyang',
-  classOf: 2005,
-  role: 'Student' }
-string ; {"name":"Iris Yang","ghID":"iriisyang","classOf":2005,"role":"Student"}
+<pre>object ; Analysis { numbers: '1,2,3,1', mean: '7/4', mode: '1', role: '' }
+string ; {"name":"1,2,3,1","mean":"7/4","mode":"1","role":""}
+object ; Analysis { numbers: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' }
+string ; {"name":"1,2,3,1","mean":"7/4","mode":"1","role":"Main Set"}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a student Array of Person(s)</span>
+<span class="kd">var</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span> 
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"1,4,3,4"</span><span class="p">,</span> <span class="s2">"3"</span><span class="p">,</span> <span class="s2">"4"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"4,2,2,2"</span><span class="p">,</span> <span class="s2">"10/4"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"9,8,7,8"</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"0,0,0,9"</span><span class="p">,</span> <span class="s2">"9/4"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"1,9,9,2"</span><span class="p">,</span> <span class="s2">"21/4"</span><span class="p">,</span> <span class="s2">"9"</span><span class="p">)</span>
+<span class="p">];</span>
+
+<span class="c1">// define a classroom and build Classroom objects and json</span>
+<span class="kd">function</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">students</span><span class="p">){</span> <span class="c1">// 1 teacher, many student</span>
+    <span class="c1">// add each Student to Classroom</span>
+    <span class="nx">mainset</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Main Set"</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">mainset</span> <span class="o">=</span> <span class="nx">mainset</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">classroom</span> <span class="o">=</span> <span class="p">[</span><span class="nx">mainset</span><span class="p">];</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">numbers</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">numbers</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">numbers</span><span class="p">.</span><span class="nx">setRole</span><span class="p">(</span><span class="s2">"Numbers"</span><span class="p">);</span> <span class="k">this</span><span class="p">.</span><span class="nx">classroom</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">numbers</span><span class="p">);</span> <span class="p">});</span>
+    <span class="c1">// build json/string format of Classroom</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">json</span> <span class="o">=</span> <span class="p">[];</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">classroom</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">numbers</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">json</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">()));</span>
+<span class="p">}</span>
+
+<span class="nx">math</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">numbers</span><span class="p">);</span>
+
+<span class="c1">// output of Objects and JSON in CompSci classroom</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">classroom</span><span class="p">);</span>  <span class="c1">// constructed classroom object</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">classroom</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">// abstract 1st objects name</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">json</span><span class="p">[</span><span class="mf">0</span><span class="p">]);</span>  <span class="c1">// show json conversion of 1st object to string</span>
+<span class="nx">logItType</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">math</span><span class="p">.</span><span class="nx">json</span><span class="p">[</span><span class="mf">0</span><span class="p">]));</span>  <span class="c1">// show JSON.parse inverse of JSON.stringify</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>object ; [ Analysis { numbers: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' },
+  Analysis { numbers: '1,4,3,4', mean: '3', mode: '4', role: 'Numbers' },
+  Analysis { numbers: '4,2,2,2', mean: '10/4', mode: '2', role: 'Numbers' },
+  Analysis { numbers: '9,8,7,8', mean: '8', mode: '8', role: 'Numbers' },
+  Analysis { numbers: '0,0,0,9', mean: '9/4', mode: '0', role: 'Numbers' },
+  Analysis { numbers: '1,9,9,2', mean: '21/4', mode: '9', role: 'Numbers' } ]
+undefined ; undefined
+string ; {"name":"1,2,3,1","mean":"7/4","mode":"1","role":"Main Set"}
+object ; { name: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' }
 </pre>
 </div>
 </div>
@@ -434,33 +324,71 @@ string ; {"name":"Iris Yang","ghID":"iriisyang","classOf":2005,"role":"Student"}
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-evalmachine.&lt;anonymous&gt;:42
-  $$.html(math._toHtml());
-          ^
 
-ReferenceError: math is not defined
-    at evalmachine.&lt;anonymous&gt;:42:11
-    at Script.runInThisContext (vm.js:96:20)
-    at Object.runInThisContext (vm.js:303:38)
-    at run ([eval]:1020:15)
-    at onRunRequest ([eval]:864:18)
-    at onMessage ([eval]:828:13)
-    at process.emit (events.js:182:13)
-    at emit (internal/child_process.js:812:12)
-    at process._tickCallback (internal/process/next_tick.js:63:19)</pre>
-</div>
-</div>
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="display:inline-block;border: 2px solid grey;box-shadow: 0.8em 0.4em 0.4em grey;"><table>
+<tr>
+<th><mark>Numbers</mark></th>
+<th><mark>Mean</mark></th>
+<th><mark>Mode</mark></th>
+</tr>
+<tr>
+<td>1,2,3,1</td>
+<td>7/4</td>
+<td>1</td>
+</tr>
+<tr></tr>
+<tr>
+<td>1,4,3,4</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr></tr>
+<tr>
+<td>4,2,2,2</td>
+<td>10/4</td>
+<td>2</td>
+</tr>
+<tr></tr>
+<tr>
+<td>9,8,7,8</td>
+<td>8</td>
+<td>8</td>
+</tr>
+<tr></tr>
+<tr>
+<td>0,0,0,9</td>
+<td>9/4</td>
+<td>0</td>
+</tr>
+<tr></tr>
+<tr>
+<td>1,9,9,2</td>
+<td>21/4</td>
+<td>9</td>
+</tr>
+<tr>&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
 
-</div>
-</div>
+&lt;/div&gt;
 
-</div>
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
     
 
-</div>
+&lt;/div&gt;
+ 
 
+</tr>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
   </div><!-- from https://github.com/utterance/utterances -->
