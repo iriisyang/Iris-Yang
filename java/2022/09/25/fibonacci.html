@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      6 min read
     
 </span></p>
 
@@ -139,6 +139,145 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Creator: Nighthawk Coding Society</span>
+<span class="cm"> * Mini Lab Name: Fibonacci sequence, featuring a Stream Algorithm</span>
+<span class="cm"> * </span>
+<span class="cm"> */</span>
+
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>  
+<span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.stream.Stream</span><span class="p">;</span>
+
+<span class="cm">/* Objective will require changing to abstract class with one or more abstract methods below */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fibo</span> <span class="p">{</span>
+    <span class="n">String</span> <span class="n">name</span><span class="p">;</span>  <span class="c1">// name or title of method</span>
+    <span class="kt">int</span> <span class="n">size</span><span class="p">;</span>  <span class="c1">// nth sequence</span>
+    <span class="kt">int</span> <span class="n">hashID</span><span class="p">;</span>  <span class="c1">// counter for hashIDs in hash map</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Long</span><span class="o">&gt;</span> <span class="n">list</span><span class="p">;</span>   <span class="c1">// captures current Fibonacci sequence</span>
+    <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">Integer</span><span class="p">,</span> <span class="n">Object</span><span class="o">&gt;</span> <span class="n">hash</span><span class="p">;</span>  <span class="c1">// captures each sequence leading to final result</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Zero parameter constructor uses Telescoping technique to allow setting of the required value nth</span>
+<span class="cm">     @param: none</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Fibo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> <span class="c1">// telescope to avoid code duplication, using default as 20</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Construct the nth fibonacci number</span>
+<span class="cm">     @param: nth number, the value is constrained to 92 because of overflow in a long</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">Fibo</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hashID</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">hash</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="c1">//initialize fibonacci and time mvc</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     This Method should be "abstract"</span>
+<span class="cm">     Leave method as protected, as it is only authorized to extender of the class</span>
+<span class="cm">     Make new class that extends and defines init()</span>
+<span class="cm">     Inside references within this class would change from this to super</span>
+<span class="cm">     Repeat process using for, while, recursion</span>
+<span class="cm">     */</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"Stream"</span><span class="p">;</span>
+        <span class="n">Stream</span><span class="p">.</span><span class="na">iterate</span><span class="p">(</span><span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">},</span> <span class="n">f</span> <span class="o">-&gt;</span> <span class="k">new</span> <span class="kt">long</span><span class="o">[]</span><span class="p">{</span><span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">,</span> <span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">+</span> <span class="n">f</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">})</span>
+            <span class="p">.</span><span class="na">limit</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">)</span>
+            <span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">f</span> <span class="o">-&gt;</span> <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="n">f</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">)</span> <span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Number is added to fibonacci sequence, current state of "list" is added to hash for hashID "num"</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setData</span><span class="p">(</span><span class="kt">long</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">num</span><span class="p">);</span>
+        <span class="n">hash</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">hashID</span><span class="o">++</span><span class="p">,</span> <span class="n">list</span><span class="p">.</span><span class="na">clone</span><span class="p">());</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Custom Getter to return last element in fibonacci sequence</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">long</span> <span class="nf">getNth</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Custom Getter to return last fibonacci sequence in HashMap</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="n">Object</span> <span class="nf">getNthSeq</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">hash</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">     Console/Terminal supported print method</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">print</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Init method = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Number "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNth</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci List = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">list</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span> <span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"fibonacci Sequence "</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s">" = "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">getNthSeq</span><span class="p">(</span><span class="n">i</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="cm">/*</span>
+<span class="cm">    Tester class method.  If this becomes abstract you will not be able to test it directly ...</span>
+<span class="cm">    Change this method to  call "main" class of each of the extended classes</span>
+<span class="cm">     */</span>
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Fibo</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Fibo</span><span class="p">();</span>
+        <span class="n">fib</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Fibo</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Init method = Stream
+fibonacci Number 10 = 34
+fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+fibonacci Sequence 1 = [0]
+fibonacci Sequence 2 = [0, 1]
+fibonacci Sequence 3 = [0, 1, 1]
+fibonacci Sequence 4 = [0, 1, 1, 2]
+fibonacci Sequence 5 = [0, 1, 1, 2, 3]
+fibonacci Sequence 6 = [0, 1, 1, 2, 3, 5]
+fibonacci Sequence 7 = [0, 1, 1, 2, 3, 5, 8]
+fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
+fibonacci Sequence 9 = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+fibonacci Sequence 10 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -157,27 +296,33 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">forfib</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"find nth term of the fibonacci sequence: "</span><span class="p">);</span>
-        <span class="kt">int</span> <span class="n">nth</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">nth</span> <span class="o">+</span> <span class="s">"\n"</span><span class="p">);</span>
-        
-        <span class="kt">int</span> <span class="n">first</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">second</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FibonacciFor</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">FibonacciFor</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> 
+    <span class="p">}</span>
 
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;=</span><span class="n">nth</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
-            <span class="kt">int</span> <span class="n">fib</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">;</span>
-            <span class="n">first</span> <span class="o">=</span> <span class="n">second</span><span class="p">;</span>
-            <span class="n">second</span> <span class="o">=</span> <span class="n">fib</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">FibonacciFor</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="c1">//initialize fibonacci and time mvc</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"For Loop"</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
         <span class="p">}</span>
+    <span class="p">}</span>
 
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">FibonacciFor</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FibonacciFor</span><span class="p">();</span>
+        <span class="n">fib</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="n">forfib</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">FibonacciFor</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -190,8 +335,20 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>find nth term of the fibonacci sequence: 5
-0 1 1 2 3 </pre>
+<pre>Init method = For Loop
+fibonacci Number 10 = 34
+fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+fibonacci Sequence 1 = [0]
+fibonacci Sequence 2 = [0, 1]
+fibonacci Sequence 3 = [0, 1, 1]
+fibonacci Sequence 4 = [0, 1, 1, 2]
+fibonacci Sequence 5 = [0, 1, 1, 2, 3]
+fibonacci Sequence 6 = [0, 1, 1, 2, 3, 5]
+fibonacci Sequence 7 = [0, 1, 1, 2, 3, 5, 8]
+fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
+fibonacci Sequence 9 = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+fibonacci Sequence 10 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre>
 </div>
 </div>
 
@@ -219,29 +376,35 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">whilefib</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"find nth term of the fibonacci sequence: "</span><span class="p">);</span>
-        <span class="kt">int</span> <span class="n">nth</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">nth</span> <span class="o">+</span> <span class="s">"\n"</span><span class="p">);</span>
-        
-        <span class="kt">int</span> <span class="n">first</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">second</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-        <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FibonacciWhile</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">FibonacciWhile</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> 
+    <span class="p">}</span>
 
-        <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">nth</span><span class="p">){</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
-            <span class="kt">int</span> <span class="n">fib</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="p">;</span>
-            <span class="n">first</span> <span class="o">=</span> <span class="n">second</span><span class="p">;</span>
-            <span class="n">second</span> <span class="o">=</span> <span class="n">fib</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">FibonacciWhile</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="c1">//initialize fibonacci and time mvc</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"While Loop"</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">i</span> <span class="o">&lt;=</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">){</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="na">list</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">));</span>
             <span class="n">i</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
+    <span class="p">}</span>
 
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">FibonacciWhile</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FibonacciWhile</span><span class="p">();</span>
+        <span class="n">fib</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="n">whilefib</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+<span class="n">FibonacciWhile</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -254,8 +417,20 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>find nth term of the fibonacci sequence: 5
-0 1 1 2 3 </pre>
+<pre>Init method = While Loop
+fibonacci Number 10 = 34
+fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+fibonacci Sequence 1 = [0]
+fibonacci Sequence 2 = [0, 1]
+fibonacci Sequence 3 = [0, 1, 1]
+fibonacci Sequence 4 = [0, 1, 1, 2]
+fibonacci Sequence 5 = [0, 1, 1, 2, 3]
+fibonacci Sequence 6 = [0, 1, 1, 2, 3, 5]
+fibonacci Sequence 7 = [0, 1, 1, 2, 3, 5, 8]
+fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
+fibonacci Sequence 9 = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+fibonacci Sequence 10 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre>
 </div>
 </div>
 
@@ -283,33 +458,39 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">recursivefib</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
-    <span class="p">{</span>
-
-        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
-  
-
-        <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-            <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FibonacciRecursion</span> <span class="kd">extends</span> <span class="n">Fibo</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">FibonacciRecursion</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span> 
     <span class="p">}</span>
-  
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span>
-    <span class="p">{</span>
-        <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"find nth term of the fibonacci sequence: "</span><span class="p">);</span>
- 
-        <span class="kt">int</span> <span class="n">nth</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">nth</span> <span class="o">+</span> <span class="s">"\n"</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nth</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="nf">FibonacciRecursion</span><span class="p">(</span><span class="kt">int</span> <span class="n">nth</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">size</span> <span class="o">=</span> <span class="n">nth</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="c1">//initialize fibonacci and time mvc</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">init</span><span class="p">();</span>
+    <span class="p">}</span>
+
+
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">init</span><span class="p">(){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"Recursion"</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="na">size</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">this</span><span class="p">.</span><span class="na">setData</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">calc</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
         <span class="p">}</span>
     <span class="p">}</span>
-<span class="p">}</span>
 
-<span class="n">recursivefib</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">calc</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">calc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">calc</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">static</span> <span class="kd">public</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">FibonacciRecursion</span> <span class="n">fib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FibonacciRecursion</span><span class="p">();</span>
+        <span class="n">fib</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">FibonacciRecursion</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -322,8 +503,20 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>find nth term of the fibonacci sequence:5
-0 1 1 2 3 </pre>
+<pre>Init method = Recursion
+fibonacci Number 10 = 34
+fibonacci List = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+fibonacci Sequence 1 = [0]
+fibonacci Sequence 2 = [0, 1]
+fibonacci Sequence 3 = [0, 1, 1]
+fibonacci Sequence 4 = [0, 1, 1, 2]
+fibonacci Sequence 5 = [0, 1, 1, 2, 3]
+fibonacci Sequence 6 = [0, 1, 1, 2, 3, 5]
+fibonacci Sequence 7 = [0, 1, 1, 2, 3, 5, 8]
+fibonacci Sequence 8 = [0, 1, 1, 2, 3, 5, 8, 13]
+fibonacci Sequence 9 = [0, 1, 1, 2, 3, 5, 8, 13, 21]
+fibonacci Sequence 10 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre>
 </div>
 </div>
 
