@@ -482,40 +482,40 @@ pre code { font-size: 15px !important; }
 
 p code { font-size: 19px; }
 
-html, body, input, textarea, select, button { color: rgba(255, 255, 255, 0.87) !important; background-color: #f7d8ff !important; }
+html, body, input, textarea, select, button { color: rgba(34, 0, 61, 0.87) !important; background-color: #dad3fc !important; }
 
-a { color: #4bbaff !important; }
+a { color: #4b8aff !important; }
 
-a:hover { color: rgba(255, 255, 255, 0.87) !important; }
+a:hover { color: rgba(34, 0, 61, 0.87) !important; }
 
-.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(255, 255, 255, 0.87) !important; }
+.site-title, .site-title:visited, .site-nav, .page-link { color: rgba(34, 0, 61, 0.87) !important; }
 
-.site-nav { background-color: #f7d8ff; border-color: #f8ddff; }
+.site-nav { background-color: #dad3fc; border-color: #dfd9fc; }
 
-* { scrollbar-color: #f7d8ff #f8ddff; }
+* { scrollbar-color: #dad3fc #dfd9fc; }
 
-pre, code { border-color: #f8ddff; background-color: #f7daff; }
+pre, code { border-color: #dfd9fc; background-color: #dcd5fc; }
 
-.page-description { color: rgba(255, 255, 255, 0.69); }
+.page-description { color: rgba(34, 0, 61, 0.87); }
 
-.post-meta { color: rgba(255, 255, 255, 0.38); }
+.post-meta { color: rgba(34, 0, 61, 0.87); }
 
-.post-content p, .post-content li { color: rgba(255, 255, 255, 0.69); }
+.post-content p, .post-content li { color: rgba(34, 0, 61, 0.87); }
 
-.btn { background-color: #f7daff !important; color: rgba(255, 255, 255, 0.87) !important; border-color: #f8ddff !important; }
+.btn { background-color: #dcd5fc !important; color: rgba(34, 0, 61, 0.87) !important; border-color: #dfd9fc !important; }
 
-.btn:hover { background-color: #f7d8ff !important; }
+.btn:hover { background-color: #dad3fc !important; }
 
-table th { background-color: #f7daff; border-color: #f8ddff; color: rgba(255, 255, 255, 0.87); }
+table th { background-color: #dcd5fc; border-color: #dfd9fc; color: rgba(34, 0, 61, 0.87); }
 
-table td { background-color: #f7d8ff; border-color: #f8ddff; color: rgba(255, 255, 255, 0.69); }
+table td { background-color: #dad3fc; border-color: #dfd9fc; color: rgba(34, 0, 61, 0.87); }
 
-.flash { color: #f7d8ff !important; filter: brightness(80%); }
+.flash { color: #dad3fc !important; filter: brightness(80%); }
 
 canvas { filter: invert(100%); }
 
-.post-list > li > div { box-shadow: none !important; background-color: #f7daff; border: none !important; }
+.post-list > li > div { box-shadow: none !important; background-color: #dcd5fc; border: none !important; }
 
-li .post-meta-description { color: rgba(255, 255, 255, 0.69) !important; }
+li .post-meta-description { color: rgba(34, 0, 61, 0.87) !important; }
 
 /*# sourceMappingURL=style.css.map */
