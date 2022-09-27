@@ -11,15 +11,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="html" />
 <meta property="og:description" content="html" />
-<link rel="canonical" href="https://iriisyang.github.io/Iris-Yang/javascript/2022/09/25/javascript.html" />
-<meta property="og:url" content="https://iriisyang.github.io/Iris-Yang/javascript/2022/09/25/javascript.html" />
+<link rel="canonical" href="https://iriisyang.github.io/Iris-Yang/javascript/2022/09/26/javascript.html" />
+<meta property="og:url" content="https://iriisyang.github.io/Iris-Yang/javascript/2022/09/26/javascript.html" />
 <meta property="og:site_name" content="Iris Yang" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-09-25T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-09-26T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="JavaScript" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Iris Yang"},"dateModified":"2022-09-25T00:00:00-05:00","datePublished":"2022-09-25T00:00:00-05:00","description":"html","headline":"JavaScript","mainEntityOfPage":{"@type":"WebPage","@id":"https://iriisyang.github.io/Iris-Yang/javascript/2022/09/25/javascript.html"},"url":"https://iriisyang.github.io/Iris-Yang/javascript/2022/09/25/javascript.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Iris Yang"},"dateModified":"2022-09-26T00:00:00-05:00","datePublished":"2022-09-26T00:00:00-05:00","description":"html","headline":"JavaScript","mainEntityOfPage":{"@type":"WebPage","@id":"https://iriisyang.github.io/Iris-Yang/javascript/2022/09/26/javascript.html"},"url":"https://iriisyang.github.io/Iris-Yang/javascript/2022/09/26/javascript.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Iris-Yang/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://iriisyang.github.io/Iris-Yang/feed.xml" title="Iris Yang" /><link rel="shortcut icon" type="image/x-icon" href="/Iris-Yang/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -74,8 +74,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">JavaScript</h1><p class="page-description">html</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-25T00:00:00-05:00" itemprop="datePublished">
-        Sep 25, 2022
+    <h1 class="post-title p-name" itemprop="name headline">JavaScript</h1><p class="page-description">html</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-09-26T00:00:00-05:00" itemprop="datePublished">
+        Sep 26, 2022
       </time>• 
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span class="p-author h-card" itemprop="name">Iris Yang</span></span>
@@ -144,10 +144,11 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a function to hold data for a Person</span>
-<span class="kd">function</span> <span class="nx">Analysis</span><span class="p">(</span><span class="nx">numbers</span><span class="p">,</span> <span class="nx">mean</span><span class="p">,</span> <span class="nx">mode</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">function</span> <span class="nx">Analysis</span><span class="p">(</span><span class="nx">numbers</span><span class="p">,</span> <span class="nx">mean</span><span class="p">,</span> <span class="nx">mode</span><span class="p">,</span> <span class="nx">median</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">numbers</span> <span class="o">=</span> <span class="nx">numbers</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">mean</span> <span class="o">=</span> <span class="nx">mean</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">mode</span> <span class="o">=</span> <span class="nx">mode</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">median</span> <span class="o">=</span> <span class="nx">median</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">role</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -163,7 +164,7 @@ window.onload = wrap_img;
     <span class="k">return</span> <span class="nx">json</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">var</span> <span class="nx">mainset</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"1,2,3,1"</span><span class="p">,</span> <span class="s2">"7/4"</span><span class="p">,</span> <span class="s2">"1"</span><span class="p">);</span>  <span class="c1">// object type is easy to work with in JavaScript</span>
+<span class="kd">var</span> <span class="nx">mainset</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"1,2,3,1"</span><span class="p">,</span> <span class="s2">"7/4"</span><span class="p">,</span> <span class="s2">"1"</span><span class="p">,</span> <span class="s2">"3/2"</span><span class="p">);</span>  <span class="c1">// object type is easy to work with in JavaScript</span>
 <span class="nx">logItType</span><span class="p">(</span><span class="nx">mainset</span><span class="p">);</span>  <span class="c1">// before role</span>
 <span class="nx">logItType</span><span class="p">(</span><span class="nx">mainset</span><span class="p">.</span><span class="nx">toJSON</span><span class="p">());</span>  <span class="c1">// ok to do this even though role is not yet defined</span>
 
@@ -183,9 +184,19 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>object ; Analysis { numbers: '1,2,3,1', mean: '7/4', mode: '1', role: '' }
+<pre>object ; Analysis {
+  numbers: '1,2,3,1',
+  mean: '7/4',
+  mode: '1',
+  median: '3/2',
+  role: '' }
 string ; {"name":"1,2,3,1","mean":"7/4","mode":"1","role":""}
-object ; Analysis { numbers: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' }
+object ; Analysis {
+  numbers: '1,2,3,1',
+  mean: '7/4',
+  mode: '1',
+  median: '3/2',
+  role: 'Main Set' }
 string ; {"name":"1,2,3,1","mean":"7/4","mode":"1","role":"Main Set"}
 </pre>
 </div>
@@ -206,11 +217,11 @@ string ; {"name":"1,2,3,1","mean":"7/4","mode":"1","role":"Main Set"}
     <div class="input_area">
 <div class=" highlight hl-javascript"><pre><span></span><span class="c1">// define a student Array of Person(s)</span>
 <span class="kd">var</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span> 
-    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"1,4,3,4"</span><span class="p">,</span> <span class="s2">"3"</span><span class="p">,</span> <span class="s2">"4"</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"4,2,2,2"</span><span class="p">,</span> <span class="s2">"10/4"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"9,8,7,8"</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"0,0,0,9"</span><span class="p">,</span> <span class="s2">"9/4"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">),</span>
-    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"1,9,9,2"</span><span class="p">,</span> <span class="s2">"21/4"</span><span class="p">,</span> <span class="s2">"9"</span><span class="p">)</span>
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"1,4,3,4"</span><span class="p">,</span> <span class="s2">"3"</span><span class="p">,</span> <span class="s2">"4"</span><span class="p">,</span> <span class="s2">"7/2"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"4,2,2,2"</span><span class="p">,</span> <span class="s2">"10/4"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"9,8,7,8"</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"0,0,0,9"</span><span class="p">,</span> <span class="s2">"9/4"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">),</span>
+    <span class="k">new</span> <span class="nx">Analysis</span><span class="p">(</span><span class="s2">"1,9,9,2"</span><span class="p">,</span> <span class="s2">"21/4"</span><span class="p">,</span> <span class="s2">"9"</span><span class="p">,</span> <span class="s2">"11/2"</span><span class="p">)</span>
 <span class="p">];</span>
 
 <span class="c1">// define a classroom and build Classroom objects and json</span>
@@ -245,12 +256,42 @@ string ; {"name":"1,2,3,1","mean":"7/4","mode":"1","role":"Main Set"}
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>object ; [ Analysis { numbers: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' },
-  Analysis { numbers: '1,4,3,4', mean: '3', mode: '4', role: 'Numbers' },
-  Analysis { numbers: '4,2,2,2', mean: '10/4', mode: '2', role: 'Numbers' },
-  Analysis { numbers: '9,8,7,8', mean: '8', mode: '8', role: 'Numbers' },
-  Analysis { numbers: '0,0,0,9', mean: '9/4', mode: '0', role: 'Numbers' },
-  Analysis { numbers: '1,9,9,2', mean: '21/4', mode: '9', role: 'Numbers' } ]
+<pre>object ; [ Analysis {
+    numbers: '1,2,3,1',
+    mean: '7/4',
+    mode: '1',
+    median: '3/2',
+    role: 'Main Set' },
+  Analysis {
+    numbers: '1,4,3,4',
+    mean: '3',
+    mode: '4',
+    median: '7/2',
+    role: 'Numbers' },
+  Analysis {
+    numbers: '4,2,2,2',
+    mean: '10/4',
+    mode: '2',
+    median: '2',
+    role: 'Numbers' },
+  Analysis {
+    numbers: '9,8,7,8',
+    mean: '8',
+    mode: '8',
+    median: '8',
+    role: 'Numbers' },
+  Analysis {
+    numbers: '0,0,0,9',
+    mean: '9/4',
+    mode: '0',
+    median: '0',
+    role: 'Numbers' },
+  Analysis {
+    numbers: '1,9,9,2',
+    mean: '21/4',
+    mode: '9',
+    median: '11/2',
+    role: 'Numbers' } ]
 undefined ; undefined
 string ; {"name":"1,2,3,1","mean":"7/4","mode":"1","role":"Main Set"}
 object ; { name: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' }
@@ -287,6 +328,7 @@ object ; { name: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' }
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Numbers"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Mean"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Mode"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
+    <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;th&gt;&lt;mark&gt;"</span> <span class="o">+</span> <span class="s2">"Median"</span> <span class="o">+</span> <span class="s2">"&lt;/mark&gt;&lt;/th&gt;"</span><span class="p">;</span>
     <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;/tr&gt;"</span><span class="p">;</span>
     <span class="c1">// Data of Array, iterate through each row of compsci.classroom </span>
     <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">row</span> <span class="k">in</span> <span class="nx">math</span><span class="p">.</span><span class="nx">classroom</span><span class="p">)</span> <span class="p">{</span>
@@ -296,6 +338,7 @@ object ; { name: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' }
       <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">math</span><span class="p">.</span><span class="nx">classroom</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">numbers</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
       <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">math</span><span class="p">.</span><span class="nx">classroom</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">mean</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
       <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">math</span><span class="p">.</span><span class="nx">classroom</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">mode</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+      <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="nx">math</span><span class="p">.</span><span class="nx">classroom</span><span class="p">[</span><span class="nx">row</span><span class="p">].</span><span class="nx">median</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
       <span class="c1">// tr to end line</span>
       <span class="nx">body</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
     <span class="p">}</span>
@@ -331,27 +374,32 @@ object ; { name: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' }
 <th><mark>Numbers</mark></th>
 <th><mark>Mean</mark></th>
 <th><mark>Mode</mark></th>
+<th><mark>Median</mark></th>
 </tr>
 <tr>
 <td>1,2,3,1</td>
 <td>7/4</td>
 <td>1</td>
+<td>3/2</td>
 </tr>
 <tr></tr>
 <tr>
 <td>1,4,3,4</td>
 <td>3</td>
 <td>4</td>
+<td>7/2</td>
 </tr>
 <tr></tr>
 <tr>
 <td>4,2,2,2</td>
 <td>10/4</td>
 <td>2</td>
+<td>2</td>
 </tr>
 <tr></tr>
 <tr>
 <td>9,8,7,8</td>
+<td>8</td>
 <td>8</td>
 <td>8</td>
 </tr>
@@ -360,12 +408,14 @@ object ; { name: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' }
 <td>0,0,0,9</td>
 <td>9/4</td>
 <td>0</td>
+<td>0</td>
 </tr>
 <tr></tr>
 <tr>
 <td>1,9,9,2</td>
 <td>21/4</td>
 <td>9</td>
+<td>11/2</td>
 </tr>
 <tr>&lt;/table&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -399,7 +449,7 @@ object ; { name: '1,2,3,1', mean: '7/4', mode: '1', role: 'Main Set' }
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/Iris-Yang/javascript/2022/09/25/javascript.html" hidden></a>
+</script><a class="u-url" href="/Iris-Yang/javascript/2022/09/26/javascript.html" hidden></a>
 </article>
 
       </div>
