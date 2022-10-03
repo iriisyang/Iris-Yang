@@ -152,7 +152,7 @@ window.onload = wrap_img;
 
 <span class="c1">//RapidAPI header  https://rapidapi.com/plotly/api/plotly-1/</span>
 <span class="n">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">()</span>
-    <span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="n">URI</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">"https://tennisapi1.p.rapidapi.com/api/tennis/search/nadal"</span><span class="p">))</span>
+    <span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="n">URI</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">"https://tennisapi1.p.rapidapi.com/api/tennis"</span><span class="p">))</span>
     <span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">"x-rapidapi-key"</span><span class="p">,</span> <span class="s">"ebb6f1a376mshadb02bb5506cb0fp127f56jsncb975393d040"</span><span class="p">)</span>
     <span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">"x-rapidapi-host"</span><span class="p">,</span> <span class="s">"tennisapi1.p.rapidapi.com"</span><span class="p">)</span>
     <span class="p">.</span><span class="na">method</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">BodyPublishers</span><span class="p">.</span><span class="na">noBody</span><span class="p">())</span>
