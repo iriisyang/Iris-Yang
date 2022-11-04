@@ -65,7 +65,7 @@ window.onload = wrap_img;
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/Iris-Yang/about/">About Me</a><a class="page-link" href="/Iris-Yang/notes/">CSA Notes</a><a class="page-link" href="/Iris-Yang/search/">Search</a><a class="page-link" href="/Iris-Yang/categories/">Tags</a></div>
+        <div class="trigger"><a class="page-link" href="/Iris-Yang/_pages/2022-11-02-N@TM.html">N@TM</a><a class="page-link" href="/Iris-Yang/about/">About Me</a><a class="page-link" href="/Iris-Yang/notes/">CSA Notes</a><a class="page-link" href="/Iris-Yang/search/">Search</a><a class="page-link" href="/Iris-Yang/categories/">Tags</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
