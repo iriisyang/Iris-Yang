@@ -32,10 +32,12 @@ Homepage
 - personalize and customize your Fastpages home page
 - standard name for your web sites landing page.
 
-## Weekly Assignments
+## Assignments
 [TT 1.0 Tools and Equipment](https://iriisyang.github.io/Iris-Yang/markdown/2022/08/21/FirstPost.html)
 
 [TT 1.1 Innovations Week 1](https://iriisyang.github.io/Iris-Yang/techtalks/2022/08/29/TT2.html)
+
+[Student Lesson 1](https://iriisyang.github.io/Iris-Yang/java/2022/10/15/Primitive.html)
 
 # Unit 2: Using Objects
 
@@ -79,12 +81,30 @@ Object Mutating Data
             sum +=nums[i];
         }
 
-## Weekly Assignments
+## Assignments
 
 [TT 1.2 Innovations Week 1](https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/05/TT3.html)
 
+[Student Lesson 2](https://iriisyang.github.io/Iris-Yang/java/2022/10/16/Objects.html)
+
 # Unit 3: Boolean Expressions and if Statements
+
+## Notes
+- if statements: executes code if parameters are true
+- if/else: executes code if parameters true, otherwise executes code within else statement
+- switch code: quicker and more efficient for more code and conditions
+- demorgan's law: logic using and (&&) and or (||)
+
+## Assignmnets
+
+[TT 1.3 Backend Development](https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/11/TT4.html)
+
+[Student Lesson 3](https://sarayu-pr11.github.io/teamGrapeSnails/java/jupyter/2022/10/17/IFsLesson.html)
+
 # Unit 4: Iteration
+
+## Notes
+
 # Unit 5: Writing Clauses
 # Unit 6: Array
 # Unit 7: ArrayList
