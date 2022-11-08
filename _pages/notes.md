@@ -104,8 +104,32 @@ Object Mutating Data
 # Unit 4: Iteration
 
 ## Notes
+Iterations
+- make code shorter - simplify repeating code into simpler section
 
-# Unit 5: Writing Clauses
+While Loop
+- while a condition is met, code will keep
+- do while loop - execute not matter what
+
+For Loop
+- for as long as a condition is true, continue printing
+
+Recursion Loop
+- own function that repeats over and over again
+
+Nested Iteration
+- not a official loop
+- put loop inside loop - can use any of the pervious loops
+
+## Assignmnets
+
+[TT 1.4 Backend Development](https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/20/TT5.html)
+
+[Student Lesson 4](https://iriisyang.github.io/Iris-Yang/java/2022/10/19/Iterations.html)
+
+# Unit 5: Writing Classes
+
+
 # Unit 6: Array
 # Unit 7: ArrayList
 # Unit 8: 2D Array
