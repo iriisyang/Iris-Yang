@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -413,11 +413,111 @@ count is 4
 <h2 id="Homework-1">
 <a class="anchor" href="#Homework-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework 1<a class="anchor-link" href="#Homework-1"> </a>
 </h2>
-<p>Write a program where the user inputs their monthly budget. The loop should then ask the user to input each of their monthly expenses. These expenses should be kept in a running total. The final output should display if the user is over or under their budget for the month, and by how much.</p>
+<p>Write a program where a random number is generated. Then the user tries to guess the number. If they guess too high display something to let them know, and same for if they guess a number that is too low. The loop must iterate until the number is guessed correctly.</p>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="p">;</span>
+ 
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Numberguesser</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span>
+    <span class="nf">guessnumber</span><span class="p">()</span>
+    <span class="p">{</span>
+        
+        <span class="n">Scanner</span> <span class="n">scanner</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+ 
+        <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)(</span><span class="mi">100</span><span class="o">*</span> <span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">());</span>
+ 
+        <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">guess</span><span class="p">;</span>
+ 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+            <span class="s">"A number is chosen between 1 to 100."</span>
+            <span class="o">+</span> <span class="s">"Guess the number"</span>
+            <span class="o">+</span> <span class="s">" within 5 trials."</span><span class="p">);</span>
+ 
+
+        <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+ 
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+                <span class="s">"Guess a number:"</span><span class="p">);</span>
+ 
+
+            <span class="n">guess</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">==</span> <span class="n">guess</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"You guessed the number."</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">&gt;</span> <span class="n">guess</span><span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The number is greater than "</span> <span class="o">+</span> <span class="n">guess</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">number</span> <span class="o">&lt;</span> <span class="n">guess</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">5</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The number is less than "</span> <span class="o">+</span> <span class="n">guess</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+ 
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+                <span class="s">"You have used all 5 trials."</span><span class="p">);</span>
+ 
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span>
+                <span class="s">"The number was "</span> <span class="o">+</span> <span class="n">number</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+ 
+    <span class="c1">// Driver Code</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span>
+    <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">arg</span><span class="o">[]</span><span class="p">)</span>
+    <span class="p">{</span>
+ 
+        <span class="c1">// Function Call</span>
+        <span class="n">guessnumber</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Numberguesser</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A number is chosen between 1 to 100.Guess the number within 5 trials.
+Guess a number:
+The number is less than 50
+Guess a number:
+The number is greater than 25
+Guess a number:
+The number is greater than 37
+Guess a number:
+The number is greater than 45
+Guess a number:
+You guessed the number.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
