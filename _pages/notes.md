@@ -129,14 +129,130 @@ Nested Iteration
 
 # Unit 5: Writing Classes
 
+Classes
+- classes are "blueprints" that we use to instantiate objects
+- classes are an essential aspect of OOP
+
+Anatomy
+- Object
+    - state, attributes, behavior
+    - represented by an instance in the program
+- Class
+    - defines an abstract data type
+    - object references: string variable
+    - instance variables: attributes, behaviors, data for objects
+
+Functions
+- methods: the action or behavior of an object
+- constructor: special method for object instantiation, sets the initial values for variables, default constructors have no arguments
+- main: tests the class
+- accesser: accesses the values of variables, returns a copy of the variable
+- mutator: changes values of variables
+
+Writing Methods
+- method_definition(Modifiers, Return Type)
+- method_signature(Name, Parameters)
+- method_body(Code)
+- "Object.method()"
+
+## Assignments
+
+[TT 1.5 Design Starters](https://iriisyang.github.io/Iris-Yang/techtalks/2022/09/25/TT6.html)
+
+[Student Lesson 5](https://iriisyang.github.io/Iris-Yang/collegeboard/2022/10/22/WritingObjects.html)
 
 # Unit 6: Array
+
+## Notes
+
+- contains a collection of data
+- can be primitive or referenced
+- element - one value in an array
+- index - the position of one value in an array
+- use loop to traverse through array
+
+## Assignments
+
+[TT 1.6 Project Approval](https://iriisyang.github.io/Iris-Yang/techtalks/2022/10/04/TT7.html)
+
+[Student Lesson 6](https://iriisyang.github.io/Iris-Yang/collegeboard/2022/10/22/WritingObjects.html)
+
 # Unit 7: ArrayList
+
+## Notes
+
+add(int index, element)
+- adds an element to the list
+
+addAll(int index, Collection collection)
+- adds all the elements in a list to another
+
+size()
+- outputs the size of a list (number of elements)
+
+clear()
+- clears everything in a list
+- reference list is stored
+
+remove(int index)
+- removes the element from a list with that specific index
+- shifts the rest of the elements to the left and decreases their index by 1
+
+remove(element)
+- remove the element with a specific name
+
+get(int index)
+- obtains the element of that index
+
+set(int index, element)
+- replaces what is in that index with the new element
+
+IndexOf(element)
+- returns the index of that element
+
+lastIndexOf(element)
+- returns last occurrence of an object if not present in list
+
+equals(element)
+- true or false if two objects (lists) are equal to one another
+
+hashCode()
+- returns the hashcode of a list
+
+isEmpty()
+- true or false if the list is empty (has no elements within)
+
+contains(element) 
+- returns true if the list contains the element
+
+containsAll(Collection collection)
+- returns yes if the list contains all the elements of the other list
+
+sort(Comparator comp)
+- sorts elements
+
+## Assignments
+
+[TT 1.7 Project Approval](https://iriisyang.github.io/Iris-Yang/techtalks/2022/10/09/TT8.html)
+
 # Unit 8: 2D Array
+
+** need more review
+
 # Unit 9: Inheritance
-# Unit 10: Recurision
+
+# Unit 10: Recursion
+
+** need more review
 
 # PBL Notes
 
 AWS Deployment (linux)
 - "ps" linux command gives info related to process of system
+POJO
+- plain old java object
+- interact with backend code through frontend (more straightforward)
+
+# Trimester 1 Reflection
+
+I came into this class with little expectations. I had a little bit of computer science background from doing Cyber Patriot in the past, but not really much coding other than a few summer camps and classes here and there when I was younger. I really liked the emphasis on a collaborative environment in this class was really enjoyable compared to the cutthroat environment in that club. I also enjoyed the emphasis on project based learning in this class. It is really useful for the real world and more interesting that just doing practice college board problems. I did struggle a lot in this class, especially in the beginning. Especially, with little background, I did not really know where to go with a lot of the assignments. I was able to rely a lot on my group and their guidance to help me. Their help was key to my success in this class. After getting the hang of the class, it was easier. However, I still have much to learn and more to improve on and I hope that I can help my group more on future projects in coming trimesters.
