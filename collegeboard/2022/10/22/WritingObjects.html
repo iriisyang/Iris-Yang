@@ -222,7 +222,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMembers</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">names</span><span class="p">,</span> <span class="kt">int</span> <span class="n">gradYear</span> <span class="p">){</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMembers</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">names</span><span class="p">,</span> <span class="kt">int</span> <span class="n">gradYear</span> <span class="p">){</span> <span class="c1">//mutator method - allows modification of grad year but not access to variable</span>
     
     <span class="k">for</span><span class="p">(</span> <span class="n">String</span> <span class="n">n</span> <span class="p">:</span> <span class="n">names</span> <span class="p">){</span>
         <span class="n">memberList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">MemberInfo</span><span class="p">(</span> <span class="n">n</span><span class="p">,</span> <span class="n">gradYear</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span> <span class="p">);</span>
