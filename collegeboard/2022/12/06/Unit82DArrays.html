@@ -770,7 +770,12 @@ value in the 2D integer array is 16, so its corresponding element in the 2D succ
       <span class="p">};</span>
  
       <span class="c1">// Print the last element in the array!</span>
-       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">tree</span><span class="p">);</span>
+      <span class="k">for</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">row</span> <span class="p">:</span> <span class="n">tree</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">item</span> <span class="p">:</span> <span class="n">row</span><span class="p">)</span> <span class="p">{</span>
+             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">item</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+         <span class="p">}</span>
+         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="sc">' '</span><span class="p">);</span>
+     <span class="p">}</span>
     <span class="p">}</span>
  
  <span class="p">}</span>
@@ -787,7 +792,16 @@ value in the 2D integer array is 16, so its corresponding element in the 2D succ
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[Ljava.lang.String;@4a23a71d</pre>
+<pre>        *          
+      * * *        
+    * * * * *      
+      * * *        
+    * * * * *      
+  * * * * * * *    
+    * * * * *      
+  * * * * * * *    
+* * * * * * * * *  
+</pre>
 </div>
 </div>
 
