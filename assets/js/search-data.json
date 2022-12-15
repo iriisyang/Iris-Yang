@@ -36,7 +36,7 @@
     
         ,"post3": {
             "title": "Unit 10 Recursions",
-            "content": "Notes . two parts to method repeat recursive call until return statement | . | base case returns number - purpose is to not have a recursive statement | binary sort most efficient method cut in half again and again | . | merge sort: sort arraylist, divide array into halves and merge together | cannot have void because it will not return anything | .",
+            "content": "Notes . two parts to method repeat recursive call until return statement | . | base case returns number - purpose is to not have a recursive statement | binary sort most efficient method cut in half again and again | . | merge sort: sort arraylist, divide array into halves and merge together divide and conquer system | . | cannot have void because it will not return anything | call stack - keeps track of how many times the recursive is called | iterations have set instructions use for and while loops recursions use function calls | . | linear recursion - single call to itself | selection sort - minimum from unsorted and putting it at the end of the sorted | .",
             "url": "https://iriisyang.github.io/Iris-Yang/collegeboard/2022/12/12/Unit10Recursion.html",
             "relUrl": "/collegeboard/2022/12/12/Unit10Recursion.html",
             "date": " • Dec 12, 2022"
