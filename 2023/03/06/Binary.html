@@ -68,11 +68,11 @@
     <span class="p">{</span> 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Add two binary numbers&quot;</span><span class="p">);</span> 
         <span class="n">Scanner</span> <span class="n">scnr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span> 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;First binary number :&quot;</span><span class="p">);</span> 
-        <span class="n">String</span> <span class="n">first</span> <span class="o">=</span> <span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;First number :&quot;</span><span class="p">);</span> 
+        <span class="n">String</span> <span class="n">first</span> <span class="o">=</span> <span class="n">scnr</span><span class="p">.</span><span class="na">next</span><span class="p">();</span> 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">first</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Second binary number :&quot;</span><span class="p">);</span> 
-        <span class="n">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">scnr</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Second number :&quot;</span><span class="p">);</span> 
+        <span class="n">String</span> <span class="n">second</span> <span class="o">=</span> <span class="n">scnr</span><span class="p">.</span><span class="na">next</span><span class="p">();</span> 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">second</span><span class="p">);</span>
         <span class="n">String</span> <span class="n">addition</span> <span class="o">=</span> <span class="n">add</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">);</span> 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">first</span> <span class="o">+</span> <span class="s">&quot; + &quot;</span> <span class="o">+</span> <span class="n">second</span> <span class="o">+</span> <span class="s">&quot; = &quot;</span> <span class="o">+</span> <span class="n">addition</span><span class="p">);</span> 
@@ -81,9 +81,10 @@
 <span class="p">}</span>
 
 <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">add</span><span class="p">(</span><span class="n">String</span> <span class="n">first</span><span class="p">,</span> <span class="n">String</span> <span class="n">second</span><span class="p">)</span> <span class="p">{</span> 
-    <span class="kt">int</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> 
+    <span class="kt">int</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// turns string into integer with base 2 (binary numbers)</span>
     <span class="kt">int</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">second</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> 
-    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">b1</span> <span class="o">+</span> <span class="n">b2</span><span class="p">;</span> <span class="k">return</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toBinaryString</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span> 
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">b1</span> <span class="o">+</span> <span class="n">b2</span><span class="p">;</span> 
+    <span class="k">return</span> <span class="n">Integer</span><span class="p">.</span><span class="na">toBinaryString</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span> <span class="c1">//returns as binary string</span>
 <span class="p">}</span>
 
 <span class="n">Binary</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -100,11 +101,11 @@
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Add two binary numbers
-First binary number :
+First number :
 1
-Second binary number :
+Second number :
 1
-1+1=10
+1 + 1 = 10
 </pre>
 </div>
 </div>
