@@ -13,10 +13,10 @@
   
     
         ,"post1": {
-            "title": "Title",
+            "title": "Binary Addition",
             "content": "import java.util.Scanner; public class Binary { public static void main(String[] args) { System.out.println(&quot;Add two binary numbers&quot;); Scanner scnr = new Scanner(System.in); System.out.println(&quot;First number :&quot;); String first = scnr.next(); System.out.println(first); System.out.println(&quot;Second number :&quot;); String second = scnr.next(); System.out.println(second); String addition = add(first, second); System.out.println(first + &quot; + &quot; + second + &quot; = &quot; + addition); scnr.close(); } } public static String add(String first, String second) { int b1 = Integer.parseInt(first, 2); // turns string into integer with base 2 (binary numbers) int b2 = Integer.parseInt(second, 2); int sum = b1 + b2; return Integer.toBinaryString(sum); //returns as binary string } Binary.main(null); . Add two binary numbers First number : 1 Second number : 1 1 + 1 = 10 .",
-            "url": "https://iriisyang.github.io/Iris-Yang/2023/03/06/Binary.html",
-            "relUrl": "/2023/03/06/Binary.html",
+            "url": "https://iriisyang.github.io/Iris-Yang/class/2023/03/06/Binary.html",
+            "relUrl": "/class/2023/03/06/Binary.html",
             "date": " • Mar 6, 2023"
         }
         
